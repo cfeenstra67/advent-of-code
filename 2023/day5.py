@@ -71,13 +71,11 @@ def main(is_part_1: bool) -> None:
     while current_type != end_type:
         dest_type = progression[current_type]
         current_map = maps[current_type, dest_type]
-        # print("type", current_type, "to", dest_type, current_ranges, current_map)
 
         unmapped_ranges = current_ranges
         next_ranges = []
 
         for (src_start, src_end), dest_start in current_map.items():
-            # print("HERE", next_ranges, unmapped_ranges, src_start, src_end, dest_start)
             next_unmapped_ranges = []
 
             for (current_start, current_end) in unmapped_ranges:
